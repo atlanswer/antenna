@@ -3,23 +3,23 @@
 
 const TITLE = 'Antenna'
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const math = require('remark-math');
-const katex = require('rehype-katex');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: TITLE,
   tagline: 'Thinking about antennas',
   url: 'https://antenna.waferlab.dev',
   baseUrl: '/',
+  organizationName: 'atlanswer', // Usually your GitHub org/user name.
+  projectName: TITLE.toLowerCase(), // Usually your repo name.
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  onDuplicateRoutes: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'atlanswer', // Usually your GitHub org/user name.
-  projectName: TITLE.toLowerCase(), // Usually your repo name.
+  staticDirectories: ['static'],
+
+  themes: [
+  ],
 
   presets: [
     [
@@ -30,16 +30,16 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          remarkPlugins: [],
+          rehypePlugins: [],
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          remarkPlugins: [],
+          rehypePlugins: [],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -50,10 +50,10 @@ const config = {
 
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css',
       type: 'text/css',
       integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+        'sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=',
       crossorigin: 'anonymous',
     },
   ],
@@ -125,13 +125,28 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Atlanswer. Built with Docusaurus.`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
+      prism: {},
     }),
+  
+  plugins: [
+  ]
 };
 
-module.exports = config;
+async function createConfig() {
+  const math = require('remark-math');
+  const katex = (await import('rehype-katex')).default;
+  const lightCodeTheme = require('prism-react-renderer/themes/github');
+  const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+  // @ts-expect-error
+  config.presets[0][1].docs.remarkPlugins.push(math); // @ts-expect-error
+  config.presets[0][1].docs.rehypePlugins.push(katex); // @ts-expect-error
+  config.presets[0][1].blog.remarkPlugins.push(math); // @ts-expect-error
+  config.presets[0][1].blog.rehypePlugins.push(katex); // @ts-expect-error
+  config.themeConfig.prism.theme = lightCodeTheme; // @ts-expect-error
+  config.themeConfig.prism.darkTheme = darkCodeTheme;
+  return config;
+}
+
+module.exports = createConfig;
