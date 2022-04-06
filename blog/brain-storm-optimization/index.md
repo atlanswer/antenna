@@ -7,13 +7,13 @@ title: Brain Storm Optimization for Electromagnetic Applications
 
 <!--truncate-->
 
-# Motivation
+## Motivation
 
 Everyone knows what's going on... 🤪
 
-# Method
+## Method
 
-## Concept
+### Concept
 
 > Brainstorming is a widely used method to facilitate creative
 > thinking among a group of people.
@@ -45,7 +45,7 @@ maximize the number of ideas under consideration. Having
 many ideas to choose from increases the probability
 of achieving a high-quality solution.
 
-## BSO algorithm
+### BSO algorithm
 
 1. **Population Initialization**:  
     A population $X$ of $N$ individuals or ideas is generated
@@ -69,13 +69,13 @@ of achieving a high-quality solution.
 ![BSO algorithm](BSO-algorithm.png)
 Fig. 1. Flowchart of the BSO algorithm
 
-# Example
+## Example
 
-## Benchmark
+### Benchmark
 
 Skip
 
-## Six-element Yagi-Uda antenna
+### Six-element Yagi-Uda antenna
 
 ![Yagi-Uda antenna configuration](Yagi-Uda-configuration.png)
 Fig. 2. Yagi-Uda antenna configuration
@@ -93,7 +93,7 @@ $$
 ![Yagi-Uda antenna result](Yagi-Uda-result.png)
 Fig. 3. Average fitness of 25 runs of the Yagi-Uda antenna design
 
-## Five-Shell Nonuniform Luneburg Lens
+### Five-Shell Nonuniform Luneburg Lens
 
 A Luneburg lens is a symmetrical dielectric sphere having
 a refractive index which decreases radially outward from its
@@ -141,7 +141,7 @@ $$
 Fig. 5. Average fitness of 25 runs of a five-shell 30$\lambda$
 diameternonuniform spherical lens antenna design.
 
-## Slotted Patch
+### Slotted Patch
 
 ![Slotted patch configuration](patch-configuration.png)
 Fig. 6. Coaxial probe-fed slotted rectangular patch.
@@ -164,9 +164,9 @@ patch antenna optimization.
 ![Slotted patch antenna measured result](patch-s11.png)
 Fig. 8. Simulated and measured $S_{11}$ comparison of the optimized slotted rectangular patch.
 
-# Binary BSO
+## Binary BSO
 
-## BSO: Continuous to Binary
+### BSO: Continuous to Binary
 
 Modified steps:
 1. **Grouping Operation**: Since each bit can
@@ -181,13 +181,13 @@ form one idea.
 is a string of binary bits, toggles the bit state from 0
 to 1 or 1 to 0.
 
-## Example
+### Example
 
-### Benchmark
+#### Benchmark
 
 Skip as well
 
-### Array thining
+#### Array thining
 
 ![Array configuration](array-configuration.png)
 Fig. 9. Optimized design of a thinned 40 × 40 planar array
@@ -198,7 +198,7 @@ by black squares.
 - **Target**: sidelobe levels
     - lower relative sidelobe levels
 
-### Pixelated patch
+#### Pixelated patch
 
 ![Binary array configuration](array-binary-configration.png)
 Fig. 10. Process of establishing the optimization problem
