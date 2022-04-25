@@ -1,6 +1,6 @@
 {
   "name": "antenna",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -47,7 +47,7 @@
     ]
   },
   "peerDependencies": {
-    "@algolia/client-search": "^4.9.1",
+    "@algolia/client-search": "^4.13.0",
     "@types/react": ">=16.8.0 <18.0.0"
   }
 }
