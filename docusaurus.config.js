@@ -2,6 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const TITLE = "Antenna";
+const GH_URL = "https://github.com/atlanswer/antenna";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -28,14 +29,14 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/atlanswer/antenna",
+          editUrl: `${GH_URL}/edit/main`,
           remarkPlugins: [],
           rehypePlugins: [],
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: "https://github.com/atlanswer/antenna",
+          editUrl: `${GH_URL}/edit/main`,
           remarkPlugins: [],
           rehypePlugins: [],
         },
@@ -68,12 +69,12 @@ const config = {
           {
             type: "doc",
             docId: "intro",
-            position: "left",
             label: "Tutorial",
+            position: "left",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: GH_URL,
             label: "GitHub",
             position: "right",
           },
@@ -95,16 +96,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "EM Journey",
+                href: "https://gitee.com/kai-lu/EM_Journey",
               },
             ],
           },
@@ -117,7 +110,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: GH_URL,
               },
             ],
           },
