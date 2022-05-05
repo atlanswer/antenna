@@ -137,10 +137,9 @@ async function createConfig() {
   const katex = (await import("rehype-katex")).default;
   const lightCodeTheme = require("prism-react-renderer/themes/github");
   const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-  // @ts-expect-error
-  config.presets[0][1].docs.remarkPlugins.push(math); // @ts-expect-error
-  config.presets[0][1].docs.rehypePlugins.push(katex); // @ts-expect-error
-  config.presets[0][1].blog.remarkPlugins.push(math); // @ts-expect-error
+  config.presets[0][1].docs.remarkPlugins.push(math);
+  config.presets[0][1].docs.rehypePlugins.push(katex);
+  config.presets[0][1].blog.remarkPlugins.push(math);
   config.presets[0][1].blog.rehypePlugins.push(katex); // @ts-expect-error
   config.themeConfig.prism.theme = lightCodeTheme; // @ts-expect-error
   config.themeConfig.prism.darkTheme = darkCodeTheme;
