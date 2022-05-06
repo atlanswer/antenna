@@ -135,11 +135,12 @@ const config = {
 async function createConfig() {
   const math = require("remark-math");
   const katex = (await import("rehype-katex")).default;
+  const mdxMermaid = [require("mdx-mermaid"), { theme: { light: "base", dark: "forest" } }];
   const lightCodeTheme = require("prism-react-renderer/themes/github");
   const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-  config.presets[0][1].docs.remarkPlugins.push(math);
+  config.presets[0][1].docs.remarkPlugins.push(math, mdxMermaid);
   config.presets[0][1].docs.rehypePlugins.push(katex);
-  config.presets[0][1].blog.remarkPlugins.push(math);
+  config.presets[0][1].blog.remarkPlugins.push(math, mdxMermaid);
   config.presets[0][1].blog.rehypePlugins.push(katex); // @ts-expect-error
   config.themeConfig.prism.theme = lightCodeTheme; // @ts-expect-error
   config.themeConfig.prism.darkTheme = darkCodeTheme;

@@ -69,6 +69,18 @@ of achieving a high-quality solution.
 ![BSO algorithm](BSO-algorithm.png)
 Fig. 1. Flowchart of the BSO algorithm
 
+```mermaid
+stateDiagram-v2
+    state "Population Initialization" as s_init
+    state "Clustering" as s_cluster
+    state "Evaluate and Rank" as s_evaluate
+    state "Choose the best Idea as the Cluster Center in each Cluster" as s_choose
+    [*] --> s_init
+    s_init --> s_cluster
+    s_cluster --> s_evaluate
+    s_evaluate --> s_choose
+```
+
 ## Example
 
 ### Benchmark
