@@ -1,6 +1,7 @@
 ---
 slug: brain-storm-optimization
 title: Brain Storm Optimization for Electromagnetic Applications
+tags: [Optimization, BSO]
 ---
 
 > Reference: A. Aldhafeeri and Y. Rahmat-Samii, "Brain Storm Optimization for Electromagnetic Applications: Continuous and Discrete," _IEEE Transactions on Antennas and Propagation_, vol. 67, no. 4, pp. 2710-2722, 2019.
