@@ -22,6 +22,8 @@ It has been proven that the MIMO systems could effectively multiply the channel 
 
 #### Antenna layout in 5G mobile terminals
 
+The change of positions of antennas.
+
 ```mermaid
 graph LR
     R[Rim region]
@@ -29,7 +31,7 @@ graph LR
     R --> B
 ```
 
-Patch Antennas on the back region of mobile terminals.
+Two desired objectives under th limited available layout areas.
 
 ```mermaid
 flowchart LR
@@ -38,9 +40,27 @@ flowchart LR
     P <--> Q
 ```
 
+### Contributions
+
+A high-isolated coupling-grounded patch (CGP) antenna pair with shared radiator is proposed.
+
+The two feeding ports with very close distance could be decoupled greatly.
+
+The grounded coupling pins (C-pins) are employed instead of the shorting pins (S-pins) to tune the CM impedance.
+
+Compared with the previous studies for patch antenna pairs:
+
+- Very high isolation
+- Complementary far-field patterns
+- Less occupied area
+
 ## Method
 
+Mode cancelling method (MCM)
+
 ### Concept
+
+High isolation performance would be obtained when the CM impedance is equal to the DM impedance.
 
 ## Result
 

@@ -16,7 +16,11 @@ function HomepageHeader() {
         <div className="container">
           <div
             className="row"
-            style={{ justifyContent: "center", columnGap: "1em" }}
+            style={{
+              justifyContent: "center",
+              columnGap: "1em",
+              rowGap: "1em",
+            }}
           >
             <div className={styles.buttons}>
               <Link
