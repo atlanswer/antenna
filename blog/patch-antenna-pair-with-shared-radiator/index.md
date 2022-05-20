@@ -20,9 +20,23 @@ It has been proven that the MIMO systems could effectively multiply the channel 
 
 [^1]: M. Kang and M. Alouini, “Capacity of Correlated MIMO Rayleigh Channels,” _IEEE Transactions on Wireless Communications_, vol. 5, no. 1, pp. 143–155, 2006.
 
+#### Antenna layout in 5G mobile terminals
 
+```mermaid
+graph LR
+    R[Rim region]
+    B[Back region]
+    R --> B
+```
 
 Patch Antennas on the back region of mobile terminals.
+
+```mermaid
+flowchart LR
+    P[Place as many antennas as possible]
+    Q[High isolation and low correlations are required]
+    P <--> Q
+```
 
 ## Method
 
