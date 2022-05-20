@@ -12,6 +12,18 @@ tags: [Decoupling, Patch Antenna]
 
 ### Motivation
 
+#### MIMO systems and mutual coupling
+
+More new radio (NR) frequency bands are commercially used in 5G MIMO systems, increasing the number of antennas on the 5G mobile terminal.
+
+It has been proven that the MIMO systems could effectively multiply the channel capacities, but the mutual couplings or correlations would deteriorate the throughput rate of the mobile terminals[^1].
+
+[^1]: M. Kang and M. Alouini, “Capacity of Correlated MIMO Rayleigh Channels,” _IEEE Transactions on Wireless Communications_, vol. 5, no. 1, pp. 143–155, 2006.
+
+
+
+Patch Antennas on the back region of mobile terminals.
+
 ## Method
 
 ### Concept

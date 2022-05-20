@@ -13,13 +13,25 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
+        <div className="container">
+          <div
+            className="row"
+            style={{ justifyContent: "center", columnGap: "1em" }}
           >
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/intro"
+              >
+                Docs (WIP) ⏱️
+              </Link>
+            </div>
+            <div className={styles.buttons}>
+              <Link className="button button--secondary button--lg" to="/blog">
+                Blog 📝
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </header>
