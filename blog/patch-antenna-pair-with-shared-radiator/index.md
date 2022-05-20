@@ -62,6 +62,12 @@ Mode cancelling method (MCM)
 
 High isolation performance would be obtained when the CM impedance is equal to the DM impedance.
 
+> Both the main beam directions of the far-field patterns are deflected toward the side of the feeding port through using S-pins and C-pins.
+
+### Influences of User;s Head and Hand
+
+Probably no.
+
 ## Result
 
 ## Conclusion
