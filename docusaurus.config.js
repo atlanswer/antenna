@@ -47,9 +47,10 @@ const config = {
 
   stylesheets: [
     {
-      href: "https://unpkg.com/katex@0.15.6/dist/katex.min.css",
+      href: "https://unpkg.com/katex@0.16.0/dist/katex.min.css",
       type: "text/css",
-      integrity: "sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs",
+      integrity:
+        "sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC",
       crossorigin: "anonymous",
     },
   ],
@@ -135,7 +136,10 @@ const config = {
 async function createConfig() {
   const math = require("remark-math");
   const katex = (await import("rehype-katex")).default;
-  const mdxMermaid = [require("mdx-mermaid"), { theme: { light: "base", dark: "forest" } }];
+  const mdxMermaid = [
+    require("mdx-mermaid"),
+    { theme: { light: "base", dark: "forest" } },
+  ];
   const lightCodeTheme = require("prism-react-renderer/themes/github");
   const darkCodeTheme = require("prism-react-renderer/themes/dracula");
   config.presets[0][1].docs.remarkPlugins.push(math, mdxMermaid);
